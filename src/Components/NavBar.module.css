@@ -1,0 +1,104 @@
+#navContainer {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+#navItems > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+#navItems > ul > li {
+  margin: 0 1rem;
+}
+
+#navItems > ul > li > button {
+  border: 1px solid;
+  padding: 1rem 0.5rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+#navItems > ul > li:first-child > button {
+  background-color: #ff7373;
+}
+
+#navItems > ul > li:last-child > button {
+  background-color: #73abff;
+  padding: 1rem 1.5rem;
+}
+
+#hamburgerContainer {
+  opacity: 0;
+  height: 0;
+  right: 0%;
+  top: 10%;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  transition: all 1s ease-in-out;
+  z-index: 10;
+}
+
+.animate {
+  animation: hamburgerAnimation 500ms ease-in-out forwards;
+}
+
+@keyframes hamburgerAnimation {
+  from {
+    opacity: 0;
+    padding: 0;
+    height: 0px;
+  }
+
+  to {
+    opacity: 1;
+    padding: 5rem 2rem;
+    height: 250px;
+  }
+}
+
+#hamburgerContainer > p {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#hamburgerContainer > button {
+  background-color: #ff7373;
+  border: 1px solid;
+  padding: 1rem 2rem;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 932px) {
+  #navContainer {
+    padding: 0.5rem;
+  }
+
+  #navItems > ul > li {
+    margin: 0 0.3rem;
+  }
+
+   #add {
+    padding: 0.5rem; 
+  }
+
+  #navItems > ul > li:first-child > button {
+    background-color: #ff7373;
+    padding: 0.5rem;
+  }
+
+  #navItems > ul > li:last-child > button {
+    background-color: #73abff;
+    padding: 0.5rem 1.5rem;
+  }
+}

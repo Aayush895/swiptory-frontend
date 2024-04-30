@@ -1,0 +1,97 @@
+#mainContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+
+.close {
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  font-size: 2rem;
+  color: red;
+  cursor: pointer;
+}
+
+.mySwiper {
+  width: 50%;
+  margin: auto;
+}
+
+#swiperContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cardContainer {
+  width: 30%;
+  position: relative;
+}
+
+.imageContainer > img {
+  width: 100%;
+  height: 450px;
+  border-radius: 1rem;
+}
+
+.cardInfoDesc {
+  position: absolute;
+  bottom: 1%;
+  left: 0%;
+  text-align: left;
+  color: white;
+  backdrop-filter: blur(10px);
+  width: 100%;
+  padding: 1.5rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.cardInfoDesc > h1 {
+  margin-bottom: 1rem;
+}
+
+#bookmark_like {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#bookmark_like > div {
+  display: flex;
+  align-items: center;
+}
+
+.bookmark {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.like,.unlike {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: ease-in-out 500ms;
+  margin-right: 0.5rem;
+}
+
+.like:hover, .unlike:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 932px) {
+  .mySwiper {
+    width: 95%;
+  }
+
+  #cardContainer {
+    width: 60%;
+  }
+}
